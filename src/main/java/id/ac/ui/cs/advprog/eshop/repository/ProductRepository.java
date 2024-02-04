@@ -24,4 +24,11 @@ public class ProductRepository {
         return productData.set(index, product);
     }
 
+    public boolean delete(Product product) {
+
+        return productData.remove(product);
+
+    }
+
+
 }
