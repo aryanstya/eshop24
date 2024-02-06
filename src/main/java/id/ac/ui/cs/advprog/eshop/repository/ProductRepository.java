@@ -19,4 +19,16 @@ public class ProductRepository {
     public Iterator <Product> findAll() {
         return productData.iterator();
     }
+
+    public Product replace(int index, Product product) {
+        return productData.set(index, product);
+    }
+
+    public boolean delete(Product product) {
+
+        return productData.remove(product);
+
+    }
+
+
 }
