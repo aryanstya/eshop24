@@ -25,10 +25,38 @@ public class ProductRepository {
     }
 
     public boolean delete(Product product) {
-
         return productData.remove(product);
+    }
+
+    public Product edit(String id, Product product) {
+        Iterator<Product> products = findAll();
+
+        int index = 0;
+        for (; products.hasNext(); index++) {
+            Product currentProduct = products.next();
+            if (currentProduct.getProductId().equals(id)) {
+                product.setProductId(currentProduct.getProductId());
+                break;
+            }
+        }
+
+        return productData.set(index, product);
 
     }
+
+    public Product get(String id) {
+        Iterator<Product> products = findAll();
+
+        while (products.hasNext()) {
+            Product currentProduct = products.next();
+            if (currentProduct.getProductId().equals(id)) {
+                return currentProduct;
+            }
+        }
+        return null;
+    }
+
+
 
 
 }
