@@ -32,7 +32,7 @@ class CarController {
     public String carListPage(Model model) {
         List<Car> allCars = carservice.findAll();
         model.addAttribute("cars", allCars);
-        return "carList";
+        return "CarList";
     }
 
     @GetMapping("/editCar/{carId}")
