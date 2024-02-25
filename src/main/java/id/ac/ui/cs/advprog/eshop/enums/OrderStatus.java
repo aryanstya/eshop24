@@ -1,7 +1,7 @@
 package id.ac.ui.cs.advprog.eshop.enums;
 
 import lombok.Getter;
-//cek 
+//cek
 @Getter
 public enum OrderStatus {
     WAITING_PAYMENT("WAITING_PAYMENT"),
