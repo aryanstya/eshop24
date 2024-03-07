@@ -13,6 +13,7 @@ public class Order {
     List<Product> products;
     Long orderTime;
     String author;
+    @Setter
     String status;
 
     public Order(String id, List<Product> products, Long orderTime, String author){
